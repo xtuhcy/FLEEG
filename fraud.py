@@ -173,8 +173,8 @@ def continue_train(input_file, start, end):
             
 if __name__ == "__main__":
     #训练数据构造
-    #gen_eeg_jsonl(start=1001, end=2000, input_file="data/train/sample_5000.jsonl", output_file="data/train/train_1k_2k.jsonl")
-    #graph.noe4j(train(input_file="data/train.jsonl", limit=2))
+    gen_eeg_jsonl(start=1001, end=2000, input_file="data/train/sample_5000.jsonl", output_file="data/train/train_1k_2k.jsonl")
+    graph.noe4j(train(input_file="data/train.jsonl", limit=2))
     continue_train(input_file="data/train/online.jsonl", start=1, end=60)
     #评估数据：正样本200条
     #gen_eeg_jsonl(start=4801, end=5000, input_file="data/train/sample_5000.jsonl", output_file="data/eval/eval_fraud_200.jsonl")
